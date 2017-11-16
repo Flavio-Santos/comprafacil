@@ -14,3 +14,73 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.orange-default{
+  background:#EB8400 !important;
+  color:white;
+}
+.toolbar-background-md{
+  background:#EB8400 !important;
+  color:white !important;
+}
+.toolbar-title-md {
+  color: white !important;
+}
+.bar-button-md {
+  color: white !important;
+}
+
+.menu-item{
+  width:100%;
+  display:block;
+  border:none;
+  background: none;
+}
+
+$blue :#EB8400;
+.back{
+  .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+    background-image: none ;
+  }
+  ion-header{
+    background: transparent;
+  }
+  button{
+    color: white;
+    background: transparent;
+    font-size: 1.2em;
+    margin-left: 1em;
+  }
+  .toolbar-background-md {
+    background: transparent!important;
+  }
+}
+
+
+/*
+  LOGIN
+*/
+
+.login{
+  text-align:left;
+  line-height: 30px;
+  border-top:1px solid #c1c1c1;
+  border-bottom:1px solid #c1c1c1;
+}
+.login:first-child{
+  border-bottom:0;
+}
+.login img{
+  margin-bottom:-10px;
+}
+.login .internal-login-handler{
+  width:190px;
+  height:35px;
+  display:block;
+  margin:auto;
+
+  /*if u want to see the "scope" of this handler*/
+  /*border:1px solid black;*/
+}
+.list-logins{
+  margin-top:100px;
+}

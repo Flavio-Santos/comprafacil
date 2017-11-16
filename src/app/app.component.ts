@@ -22,7 +22,10 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Perfil', component: ListPage },
+      { title: 'Minhas compras', component: ListPage },
+      { title: 'Meus produtos', component: ListPage },
+      { title: 'Minhas vendas', component: ListPage }
     ];
 
   }
@@ -31,7 +34,7 @@ export class MyApp {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
+      this.statusBar.backgroundColorByHexString('#D07400');
       this.splashScreen.hide();
     });
   }
