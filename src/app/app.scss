@@ -84,3 +84,11 @@ $blue :#EB8400;
 .list-logins{
   margin-top:100px;
 }
+
+.menu{
+  .item.active, .item.activated, .item-complex.active .item-content, .item-complex.activated .item-content {
+    border-color: #ccc;
+    background-color: #D07400;
+  }
+}
+
