@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { ChatPage } from '../pages/chat/chat';
 
 @Component({
   templateUrl: 'app.html'
@@ -25,6 +26,7 @@ export class MyApp {
       { title: 'Perfil', component: ListPage },
       { title: 'Minhas compras', component: ListPage },
       { title: 'Meus produtos', component: ListPage },
+      { title: 'Chat', component: ChatPage },
       { title: 'Minhas vendas', component: ListPage }
     ];
 
