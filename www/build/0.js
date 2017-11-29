@@ -24,7 +24,7 @@ var ChatPageModule = (function () {
     return ChatPageModule;
 }());
 ChatPageModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_2__chat__["a" /* ChatPage */],
         ],

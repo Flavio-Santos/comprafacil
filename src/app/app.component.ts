@@ -2,14 +2,16 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Facebook } from '@ionic-native/facebook';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { ProductlistPage } from '../pages/productlist/productlist'
-
 import { ChatPage } from '../pages/chat/chat';
+
 
 
 @Component({
@@ -22,7 +24,7 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public fb: Facebook) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -32,6 +34,10 @@ export class MyApp {
       { title: 'Minhas compras', component: ListPage },
       { title: 'Meus produtos', component: ListPage },
       { title: 'Minhas vendas', component: ListPage },
+<<<<<<< HEAD
+=======
+      { title: 'Produtos', component: ProductlistPage },
+>>>>>>> cb368a54bcf3284f5db3b23f07335d600a000fd8
       { title: 'Chat', component: ChatPage },
     ];
 
