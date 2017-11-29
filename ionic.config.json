@@ -4,5 +4,11 @@
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "proxies": [
+    {
+      "path": "/cloudfoundry",
+      "proxyUrl": "https://gs-sts-cloud-foundry-deployment-angoti.cfapps.io"
+    }
+  ]
 }

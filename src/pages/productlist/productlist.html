@@ -14,10 +14,11 @@
 
 
 <ion-content padding>
-  <button ion-item *ngFor="let product of products" (click)="itemTapped($event, item)">
-    {{product.name}}
+  <button ion-item  *ngFor="let product of products" (click)="itemTapped($event, item)">
+    {{product.nome}}
     <div class="item-note" item-end>
-      {{product.price}}
+      
     </div>
   </button>
+  <button ion-button (click)="searchForMovie()"></button>
 </ion-content>

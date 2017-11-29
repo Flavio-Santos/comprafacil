@@ -5,8 +5,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Facebook } from '@ionic-native/facebook';
 //FacebookLoginResponse colocar ali em cima se der pau
 
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { ProductlistPage } from '../pages/productlist/productlist';
 import { ChatPage } from '../pages/chat/chat';
 
 @Component({
@@ -28,8 +32,9 @@ export class MyApp {
       { title: 'Perfil', component: ListPage },
       { title: 'Minhas compras', component: ListPage },
       { title: 'Meus produtos', component: ListPage },
+      { title: 'Minhas vendas', component: ListPage },
+      { title: 'Produtos', component: ProductlistPage },
       { title: 'Chat', component: ChatPage },
-      { title: 'Minhas vendas', component: ListPage }
     ];
 
   }
