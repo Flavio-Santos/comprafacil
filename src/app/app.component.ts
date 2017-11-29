@@ -34,11 +34,8 @@ export class MyApp {
       { title: 'Minhas compras', component: ListPage },
       { title: 'Meus produtos', component: ListPage },
       { title: 'Minhas vendas', component: ListPage },
-<<<<<<< HEAD
-=======
       { title: 'Produtos', component: ProductlistPage },
->>>>>>> cb368a54bcf3284f5db3b23f07335d600a000fd8
-      { title: 'Chat', component: ChatPage },
+      { title: 'Chat', component: ChatPage }
     ];
 
   }
