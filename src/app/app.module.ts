@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-
+import { CadastrarPage } from '../pages/cadastrar/cadastrar'
 import { ProductlistPage } from '../pages/productlist/productlist';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -28,7 +28,8 @@ const config: SocketIoConfig = { url: 'http://10.10.20.28:3001', options: {} };
     ListPage,
     ProductlistPage,
     ChatPage,
-    ListPage
+    ListPage,
+    CadastrarPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +45,8 @@ const config: SocketIoConfig = { url: 'http://10.10.20.28:3001', options: {} };
     ListPage,
     ProductlistPage,
     ChatPage,
-    ListPage
+    ListPage,
+    CadastrarPage
   ],
   providers: [
     StatusBar,

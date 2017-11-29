@@ -27917,3 +27917,12 @@ page-chat .time {
 page-chat .message_row {
   background-color: #fff;
 }
+
+page-productlist .preco {
+  color: darkgreen;
+  padding-top: 1em;
+}
+
+page-productlist ion-row {
+  border-bottom: 1px solid lightgray;
+}

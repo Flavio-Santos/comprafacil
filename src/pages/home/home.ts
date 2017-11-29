@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Nav, NavController } from 'ionic-angular';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+import { CadastrarPage } from '../cadastrar/cadastrar';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  @ViewChild(Nav) nav: Nav;
   pageData: {title: string};
 
   constructor(public navCtrl: NavController, public fb: Facebook) {
@@ -19,5 +20,7 @@ export class HomePage {
       .then((res: FacebookLoginResponse) => alert('Logged into Facebook!'))
       .catch(e => alert('Error logging into Facebook'));
   }
-
+  cadastro(){
+    this.navCtrl.push(CadastrarPage)
+  }
 }
