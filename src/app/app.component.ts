@@ -15,6 +15,7 @@ import { MappagePage } from '../pages/mappage/mappage';
 
 
 
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -31,10 +32,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'Perfil', component: ListPage },
-      { title: 'Minhas compras', component: ListPage },
-      { title: 'Meus produtos', component: ListPage },
-      { title: 'Minhas vendas', component: ListPage },
+      { title: 'Busca de produtos', component: ListPage },
       { title: 'Produtos', component: ProductlistPage },
       { title: 'Chat', component: ChatPage },
       { title: 'Maps', component: MappagePage },

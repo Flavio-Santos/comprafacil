@@ -12,13 +12,20 @@
 
 </ion-header>
 
-
-<ion-content padding>
-  <button ion-item  *ngFor="let product of products" (click)="itemTapped($event, item)">
-    {{product.nome}}
-    <div class="item-note" item-end>
-      
-    </div>
-  </button>
-  <button ion-button (click)="searchForMovie()"></button>
+<!--*ngFor="let product of products"-->
+<ion-content>
+  <ion-grid>
+    <ion-row >
+      <ion-col col-4 class="img">
+          <img src="https://fichatecnica.motosblog.com.br/fotos/cache_30bf74d4f35848c20bd64079c5978792_907.jpg" alt="">
+      </ion-col>
+      <ion-col col-5 class="dados">
+        <p><b> Moto 150</b></p>
+        <p>Lorem ips ipsam neque porro nam illo repudiandae!</p>
+      </ion-col>
+      <ion-col col-3 class="preco">
+          RS123
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
