@@ -15,11 +15,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AllProductsProvider } from '../providers/all-products/all-products';
 
 import { ChatPage } from '../pages/chat/chat';
+import { MappagePage } from '../pages/mappage/mappage';
 import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 import { Facebook } from '@ionic-native/facebook';
 //colocar ali em cima se der pau FacebookLoginResponse
 
-const config: SocketIoConfig = { url: 'http://10.10.20.28:3001', options: {} };
+const config: SocketIoConfig = { url: 'http://10.10.20.138:3001', options: {} };
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ const config: SocketIoConfig = { url: 'http://10.10.20.28:3001', options: {} };
     ListPage,
     ProductlistPage,
     ChatPage,
-    ListPage
+    ListPage,
+    MappagePage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ const config: SocketIoConfig = { url: 'http://10.10.20.28:3001', options: {} };
     ListPage,
     ProductlistPage,
     ChatPage,
-    ListPage
+    ListPage,
+    MappagePage
   ],
   providers: [
     StatusBar,

@@ -11,6 +11,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { ProductlistPage } from '../pages/productlist/productlist'
 import { ChatPage } from '../pages/chat/chat';
+import { MappagePage } from '../pages/mappage/mappage';
 
 
 
@@ -36,6 +37,7 @@ export class MyApp {
       { title: 'Minhas vendas', component: ListPage },
       { title: 'Produtos', component: ProductlistPage },
       { title: 'Chat', component: ChatPage },
+      { title: 'Maps', component: MappagePage },
     ];
 
   }
@@ -52,6 +54,6 @@ export class MyApp {
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    this.nav.push(page.component);
   }
 }

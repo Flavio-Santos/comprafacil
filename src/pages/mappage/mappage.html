@@ -1,0 +1,23 @@
+<!--
+  Generated template for the MappagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Escolha um local para encontrar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+  <div id="search" style="background:whitesmoke; width:90%; height:50px; border-radius:10px; position:absolute; z-index:9999; top:70px; left:5%; display:none; box-shadow: 1px 2px 3px grey; padding:3px; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;">
+    <p style="color:darkgrey; font-size:15px;">Escolha um lugar para negociar...</p>
+  </div>
+  <div #map id="map" style="width:100%; height:100%" (click)="loadMap()">
+    <img style="display:block; margin:auto;" src="https://m.popkey.co/163fce/Llgbv_s-200x150.gif" alt="">
+  </div>
+</ion-content>

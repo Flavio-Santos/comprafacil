@@ -34,9 +34,9 @@ export class ChatPage {
     this.getUsers().subscribe(data => {
       let user = data['user'];
       if (data['event'] === 'left') {
-        this.showToast('User left: ' + user);
+        this.showToast('usuario entrou: ' + user);
       } else {
-        this.showToast('User joined: ' + user);
+        this.showToast('usuario saiu: ' + user);
       }
     });
   }
