@@ -1,32 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-<<<<<<< HEAD
 
 import { ProductlistPage } from '../pages/productlist/productlist';
-=======
-import { ProductlistPage } from '../pages/productlist/productlist'
->>>>>>> cb368a54bcf3284f5db3b23f07335d600a000fd8
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AllProductsProvider } from '../providers/all-products/all-products';
-<<<<<<< HEAD
+
 
 import { ChatPage } from '../pages/chat/chat';
-
-
-=======
-
-import { ChatPage } from '../pages/chat/chat';
->>>>>>> cb368a54bcf3284f5db3b23f07335d600a000fd8
 import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 import { Facebook } from '@ionic-native/facebook';
 //colocar ali em cima se der pau FacebookLoginResponse
@@ -40,11 +29,6 @@ const config: SocketIoConfig = { url: 'http://10.10.20.28:3001', options: {} };
     ListPage,
     ProductlistPage,
     ChatPage,
-<<<<<<< HEAD
-
-=======
-    ListPage
->>>>>>> cb368a54bcf3284f5db3b23f07335d600a000fd8
   ],
   imports: [
     BrowserModule,
@@ -60,11 +44,6 @@ const config: SocketIoConfig = { url: 'http://10.10.20.28:3001', options: {} };
     ListPage,
     ProductlistPage,
     ChatPage,
-<<<<<<< HEAD
-
-=======
-    ListPage
->>>>>>> cb368a54bcf3284f5db3b23f07335d600a000fd8
   ],
   providers: [
     StatusBar,
