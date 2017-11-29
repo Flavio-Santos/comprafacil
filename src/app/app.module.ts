@@ -10,6 +10,9 @@ import { ChatPage } from '../pages/chat/chat';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
+import { Facebook } from '@ionic-native/facebook';
+//colocar ali em cima se der pau FacebookLoginResponse
+
 const config: SocketIoConfig = { url: 'http://10.10.20.28:3001', options: {} };
 
 @NgModule({
@@ -34,6 +37,7 @@ const config: SocketIoConfig = { url: 'http://10.10.20.28:3001', options: {} };
   providers: [
     StatusBar,
     SplashScreen,
+    Facebook,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
