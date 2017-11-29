@@ -35,7 +35,7 @@ export class MyApp {
       { title: 'Meus produtos', component: ListPage },
       { title: 'Minhas vendas', component: ListPage },
       { title: 'Produtos', component: ProductlistPage },
-      { title: 'Chat', component: ChatPage }
+      { title: 'Chat', component: ChatPage },
     ];
 
   }
