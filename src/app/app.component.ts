@@ -7,7 +7,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+<<<<<<< HEAD
 import { ProductlistPage } from '../pages/productlist/productlist'
+=======
+import { ChatPage } from '../pages/chat/chat';
+>>>>>>> d31f79b7790aa1250c2711466149340d0c9c3a75
 
 @Component({
   templateUrl: 'app.html'
@@ -28,8 +32,13 @@ export class MyApp {
       { title: 'Perfil', component: ListPage },
       { title: 'Minhas compras', component: ListPage },
       { title: 'Meus produtos', component: ListPage },
+<<<<<<< HEAD
       { title: 'Minhas vendas', component: ListPage },
       { title: 'Produtos', component: ProductlistPage }
+=======
+      { title: 'Chat', component: ChatPage },
+      { title: 'Minhas vendas', component: ListPage }
+>>>>>>> d31f79b7790aa1250c2711466149340d0c9c3a75
     ];
 
   }
