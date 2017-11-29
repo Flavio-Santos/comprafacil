@@ -2,9 +2,12 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { ProductlistPage } from '../pages/productlist/productlist'
 
 @Component({
   templateUrl: 'app.html'
@@ -25,7 +28,8 @@ export class MyApp {
       { title: 'Perfil', component: ListPage },
       { title: 'Minhas compras', component: ListPage },
       { title: 'Meus produtos', component: ListPage },
-      { title: 'Minhas vendas', component: ListPage }
+      { title: 'Minhas vendas', component: ListPage },
+      { title: 'Produtos', component: ProductlistPage }
     ];
 
   }
