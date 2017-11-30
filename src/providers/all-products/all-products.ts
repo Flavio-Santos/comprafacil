@@ -13,7 +13,7 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class AllProductsProvider {
-  url = "http://10.10.21.3:8080"
+  url = "http://localhost:8080";
 
   constructor(public http: HttpClient) {
     /*if (this._platform.is("cordova")) {
