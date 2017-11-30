@@ -15,10 +15,10 @@ import { AllProductsProvider } from '../../providers/all-products/all-products'
 })
 export class ProductlistPage {
 
-  
-  products: Object;
+
+  public products: Object;
   constructor(public navCtrl: NavController, public navParams: NavParams, private allProducts: AllProductsProvider) {
-    
+
   }
 
   ionViewDidLoad() {
@@ -33,8 +33,8 @@ export class ProductlistPage {
 			},
 			() => console.log('consulta completa')
 		);
-  } 
-  
-  
+  }
+
+
 
 }
