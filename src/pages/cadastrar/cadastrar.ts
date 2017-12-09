@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
-import { AllProductsProvider } from '../../providers/all-products/all-products';
 import { AlertController } from 'ionic-angular/components/alert/alert-controller';
-
 import { ProductlistPage } from '../productlist/productlist';
+
+import { UserProvider } from '../../providers/user/user';
 
 /**
  * Generated class for the CadastrarPage page.
@@ -24,7 +23,7 @@ import { ProductlistPage } from '../productlist/productlist';
 export class CadastrarPage {
   user: {};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public providerCloud: AllProductsProvider, private alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public userProvider: UserProvider, private alertCtrl: AlertController) {
     this.user = {};
   }
 
@@ -33,17 +32,19 @@ export class CadastrarPage {
   }
 
   enviar(){
-    this.providerCloud.postProduto(this.user).subscribe(data => {
+    this.userProvider.store(this.user).subscribe(data => {
       console.log('resposta', data);
     }, error => {
-      if (error['status'] == 201)
+
+      if (error['status'] == 201){
         this.showAlert();
-      if(error['status'] == 401)
-        this.showLoginError();
-      else
+      }if(error['status'] == 400){
+        this.showLoginError(JSON.parse(error["error"]).msg);
+      }else{
         this.navCtrl.push(ProductlistPage);
+      }
+
     });
-    console.log(this.user);
   }
 
   showAlert() {
@@ -55,10 +56,10 @@ export class CadastrarPage {
     alert.present();
   }
 
-  showLoginError() {
+  showLoginError(message) {
     let alert = this.alertCtrl.create({
-      title: 'Respota',
-      subTitle: 'FAZ O LOGIN DIREITO DOIDO',
+      title: 'Resposta',
+      subTitle: message,
       buttons: ['OK']
     });
     alert.present();

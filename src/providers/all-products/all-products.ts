@@ -22,8 +22,8 @@ export class AllProductsProvider {
   }
 
   postProduto(data) {
-    var headers = new HttpHeaders('Content-Type:application/json; charset=UTF-8');
-    var myData = JSON.stringify({ email: data.email, senha:data.senha });
+    let headers = new HttpHeaders('Content-Type:application/json; charset=UTF-8');
+    let myData = JSON.stringify({ email: data.email, senha:data.senha });
     return this.http.post(this.url + '/login', myData, { headers: headers });
   }
 
