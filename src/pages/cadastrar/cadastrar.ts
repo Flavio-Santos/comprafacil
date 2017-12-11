@@ -33,7 +33,8 @@ export class CadastrarPage {
   }
 
   enviar(){
-    this.providerCloud.postProduto(this.user).subscribe(data => {
+    
+    this.providerCloud.postCadastrar(this.user).subscribe(data => {
       console.log('resposta', data);
     }, error => {
       if (error['status'] == 201)

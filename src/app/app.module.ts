@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { CadastrarPage } from '../pages/cadastrar/cadastrar'
 import { ProductlistPage } from '../pages/productlist/productlist';
+import { LoginPage } from '../pages/login/login';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -31,7 +32,8 @@ const config: SocketIoConfig = { url: 'http://10.10.20.138:3001', options: {} };
     ChatPage,
     ListPage,
     MappagePage,
-    CadastrarPage
+    CadastrarPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,8 @@ const config: SocketIoConfig = { url: 'http://10.10.20.138:3001', options: {} };
     ChatPage,
     ListPage,
     MappagePage,
-    CadastrarPage
+    CadastrarPage,
+    LoginPage
   ],
   providers: [
     StatusBar,

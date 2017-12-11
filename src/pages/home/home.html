@@ -21,8 +21,14 @@
         Login com gmail
       </span>
     </button>
-    <ion-item>
-        <button ion-button (click)="cadastro()">Cadastrar</button>
+    <button ion-item no-padding class="login" (click)="logar()">
+      <span class="internal-login-handler">
+        Login
+      </span>
+    </button>
+    <ion-item style="margin-top: 1em;">
+        <button ion-button outline full (click)="cadastro()">Cadastrar</button>
     </ion-item>
+
   </ion-list>
 </ion-content>
