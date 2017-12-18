@@ -14,7 +14,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class AllProductsProvider {
 
-  url = "http://localhost:8090";
+  url = "http://localhost:8080";
 
 
   constructor(public http: HttpClient) {

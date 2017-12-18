@@ -13,6 +13,7 @@ import { ProductlistPage } from '../pages/productlist/productlist';
 import { VenderPage } from '../pages/vender/vender';
 import { LoginPage } from '../pages/login/login';
 import { ProdutoPage } from '../pages/produto/produto';
+import { ModalPagamentoPage } from '../pages/modal-pagamento/modal-pagamento';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -40,7 +41,8 @@ const config: SocketIoConfig = { url: 'http://10.10.20.138:3001', options: {} };
     CadastrarPage,
     VenderPage,
     LoginPage,
-    ProdutoPage
+    ProdutoPage,
+    ModalPagamentoPage
   ],
   imports: [
     BrowserModule,
@@ -62,7 +64,8 @@ const config: SocketIoConfig = { url: 'http://10.10.20.138:3001', options: {} };
     MeusAnunciosPage,
     VenderPage,
     LoginPage,
-    ProdutoPage
+    ProdutoPage,
+    ModalPagamentoPage
   ],
   providers: [
     StatusBar,
