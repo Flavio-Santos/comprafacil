@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { AllProductsProvider } from '../../providers/all-products/all-products'
+import { AllProductsProvider } from '../../providers/all-products/all-products';
+import { ProdutoPage } from '../produto/produto';
 
 /**
  * Generated class for the ProductlistPage page.
@@ -35,6 +36,8 @@ export class ProductlistPage {
 		);
   }
 
-
+  produto(product){
+    this.navCtrl.push(ProdutoPage,{product});
+  }
 
 }

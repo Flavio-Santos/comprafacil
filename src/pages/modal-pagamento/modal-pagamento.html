@@ -1,0 +1,23 @@
+
+<ion-content class="modal_overlay" (click)="lessModal()" >
+  <div class="modal_pag">
+      <h3 text-center>Forma de Pagamento</h3>
+      <ion-list radio-group [(ngModel)]="relationship">
+        
+        <ion-item>
+          <ion-label>Pagar em Dinheiro</ion-label>
+          <ion-radio value="money" checked></ion-radio>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label>Pagar com Cartão</ion-label>
+          <ion-radio value="card"></ion-radio>
+        </ion-item>
+    
+        <ion-item text-right class="btns">
+          <button outline ion-button color="light" (click)="lessModal()">Cancelar</button>
+          <button outline ion-button color="light" (click)="chamaLoc()">Confirmar</button>
+        </ion-item>
+      </ion-list>
+  </div>
+</ion-content>

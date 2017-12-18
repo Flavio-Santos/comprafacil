@@ -1,0 +1,34 @@
+page-modal-pagamento {
+    .modal_pag{
+        width: 80%;
+        height: 35%;
+        margin-left: 10%;
+        margin-top: 50%;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px 1px;
+    }
+    .btns{
+        border: 0px;
+        outline: none;
+        button{
+            color: $azul;
+        }
+    }
+    .modal_overlay{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(1, 1, 1, 0.445)
+    }
+    ion-list{
+        border-radius: 5px;
+        .item-md{
+            background-color: transparent;
+        }
+    }
+    h3{
+        padding-top: 7px;
+        color: $azul;
+    }
+}

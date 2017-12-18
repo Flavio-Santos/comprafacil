@@ -15,7 +15,7 @@
 <!--*ngFor="let product of products"-->
 <ion-content>
   <ion-grid>
-    <ion-row *ngFor="let product of products">
+    <ion-row *ngFor="let product of products" (click)="produto(product)">
       <ion-col col-4 class="img">
           <img *ngIf="!!product.imagens[0]" [src]="product.imagens[0]" alt="">
           <img *ngIf="!product.imagens[0]" src="https://www.materialui.co/materialIcons/image/camera_alt_grey_192x192.png" alt="">

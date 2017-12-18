@@ -1,0 +1,30 @@
+page-produto {
+    .slideProd{
+
+    }
+    .slideProd{
+        height: 50%;
+    }
+    .swiper-pagination-bullet-active{
+        color: $laranja;
+    }
+    .nome{
+        color: $azul;
+        font-size: 1.2em;
+    }
+    .valor{
+        color: rgb(81, 216, 81);
+        text-align: right;
+        font-size: 1.2em;
+    }
+    .descricao{
+        text-align: justify;
+    }
+    .btn_comprar{
+        background-color: $azul;
+        border-radius: 15px;
+        bottom: 10px;
+        margin-top: 1em;
+        
+    }
+}
