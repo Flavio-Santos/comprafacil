@@ -27,7 +27,6 @@ export class ModalPagamentoPage {
     this.viewCtrl.dismiss();
   }
   chamaLoc(){
-    this.viewCtrl.dismiss();
-    this.navCtrl.setRoot(MappagePage);
+    this.navCtrl.push(MappagePage);
   }
 }
