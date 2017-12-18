@@ -13,7 +13,9 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class AllProductsProvider {
-  url = "http://localhost:8080"
+
+  url = "http://localhost:8080";
+
 
   constructor(public http: HttpClient) {
     /*if (this._platform.is("cordova")) {
@@ -25,6 +27,7 @@ export class AllProductsProvider {
     var headers = new HttpHeaders('Content-Type:application/json; charset=UTF-8');
     var myData = JSON.stringify({ email: data.email, senha:data.senha });
     return this.http.post(this.url + '/anuncio', myData, { headers: headers });
+
   }
 
   postLogin(data) {

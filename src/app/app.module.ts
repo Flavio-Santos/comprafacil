@@ -19,6 +19,7 @@ import { ChatPage } from '../pages/chat/chat';
 import { MappagePage } from '../pages/mappage/mappage';
 import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 import { Facebook } from '@ionic-native/facebook';
+import { UserProvider } from '../providers/user/user';
 //colocar ali em cima se der pau FacebookLoginResponse
 
 const config: SocketIoConfig = { url: 'http://10.10.20.138:3001', options: {} };
@@ -59,7 +60,8 @@ const config: SocketIoConfig = { url: 'http://10.10.20.138:3001', options: {} };
     SplashScreen,
     Facebook,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AllProductsProvider
+    AllProductsProvider,
+    UserProvider
   ]
 })
 export class AppModule {}
