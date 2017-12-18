@@ -27,4 +27,7 @@ export class ProdutoPage {
     let modal = this.modalCtrl.create(ModalPagamentoPage);
     modal.present();
   }
+  lessModal() {
+    this.viewCtrl.dismiss();
+  }
 }
