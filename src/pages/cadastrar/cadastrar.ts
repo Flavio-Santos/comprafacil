@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular/components/alert/alert-controller';
 import { ProductlistPage } from '../productlist/productlist';
+import { LoginPage } from '../login/login';
 
 import { UserProvider } from '../../providers/user/user';
 
@@ -39,10 +40,9 @@ export class CadastrarPage {
 
       if (error['status'] == 201){
         this.showAlert();
+        this.navCtrl.push(LoginPage);
       }if(error['status'] == 400){
         this.showLoginError(JSON.parse(error["error"]).msg);
-      }else{
-        this.navCtrl.push(ProductlistPage);
       }
 
     });
