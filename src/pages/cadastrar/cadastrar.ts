@@ -32,6 +32,7 @@ export class CadastrarPage {
   }
 
   enviar(){
+
     this.userProvider.store(this.user).subscribe(data => {
       console.log('resposta', data);
     }, error => {
@@ -49,8 +50,8 @@ export class CadastrarPage {
 
   showAlert() {
     let alert = this.alertCtrl.create({
-      title: 'Respota',
-      subTitle: 'Produto criado com sucesso!',
+      title: 'Resposta',
+      subTitle: 'Cadastrado com sucesso!',
       buttons: ['OK']
     });
     alert.present();

@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, NavController } from 'ionic-angular';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { CadastrarPage } from '../cadastrar/cadastrar';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-home',
@@ -22,5 +23,8 @@ export class HomePage {
   }
   cadastro(){
     this.navCtrl.push(CadastrarPage)
+  }
+  logar(){
+    this.navCtrl.push(LoginPage);
   }
 }

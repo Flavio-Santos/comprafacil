@@ -13,7 +13,9 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class AllProductsProvider {
+
   url = "http://localhost:8080";
+
 
   constructor(public http: HttpClient) {
     /*if (this._platform.is("cordova")) {
@@ -21,10 +23,23 @@ export class AllProductsProvider {
     }*/
   }
 
-  postProduto(data) {
-    let headers = new HttpHeaders('Content-Type:application/json; charset=UTF-8');
-    let myData = JSON.stringify({ email: data.email, senha:data.senha });
+  postAnuncio(data) {
+    var headers = new HttpHeaders('Content-Type:application/json; charset=UTF-8');
+    var myData = JSON.stringify({ email: data.email, senha:data.senha });
+    return this.http.post(this.url + '/anuncio', myData, { headers: headers });
+
+  }
+
+  postLogin(data) {
+    var headers = new HttpHeaders('Content-Type:application/json; charset=UTF-8');
+    var myData = JSON.stringify({ email: data.email, senha:data.senha });
     return this.http.post(this.url + '/login', myData, { headers: headers });
+  }
+
+  postCadastrar(data) {
+    var headers = new HttpHeaders('Content-Type:application/json; charset=UTF-8');
+    var myData = JSON.stringify({ id:null, email: data.email, nome: data.nome });
+    return this.http.post(this.url + '/usuarios', myData, { headers: headers });
   }
 
   consultaServidor() {
@@ -32,7 +47,15 @@ export class AllProductsProvider {
   }
 
   getCategorias() {
-    return this.http.get(this.url+'/categorias');
+    return this.http.get(this.url + '/categorias');
+  }
+
+  todosAnuncios(){
+    return this.http.get(this.url+'/produtos');
+  }
+
+  localizacoes(){
+    return this.http.get(this.url+'/localizacoes');
   }
 
 }
