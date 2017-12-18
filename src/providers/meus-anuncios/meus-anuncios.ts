@@ -11,7 +11,7 @@ import { HttpClient, HttpHeaders} from "@angular/common/http";
 @Injectable()
 export class MeusAnunciosProvider {
 
-  private url = "http://localhost:8080";
+  private url = "http://localhost:8090";
 
   constructor(public http: HttpClient) {
     console.log('Hello MeusAnunciosProvider Provider');
