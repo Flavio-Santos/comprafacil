@@ -45,7 +45,8 @@ export class VenderPage {
     descricao: '',
     vendedor: {
       id: 2
-    }
+    },
+    imagens: []
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient, public anunciosProvider: MeusAnunciosProvider, private alertCtrl: AlertController) {
@@ -71,7 +72,10 @@ export class VenderPage {
       descricao : produto.descricao,
       vendedor : {
         id: 2
-      }
+      },
+      imagens: [
+        "https://www.materialui.co/materialIcons/image/camera_alt_grey_192x192.png"
+      ]
     }
 
     this.anunciosProvider.storeAnuncio(this.produtoPostar).subscribe(

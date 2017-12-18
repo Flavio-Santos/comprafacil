@@ -27,6 +27,11 @@ export class ProductlistPage {
     this.allProducts.consultaServidor().subscribe(
 			data => {
 				this.products = data;
+				for(let i in this.products){
+				  this.products[i].valor = parseFloat(this.products[i].valor).toFixed(2);
+          this.products[i].valor = "R$ " + this.products[i].valor;
+          this.products[i].valor = this.products[i].valor.replace(".", ",");
+        }
 				console.log("retorno: ", data);
 			},
 			err => {
