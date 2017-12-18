@@ -42,7 +42,7 @@ export class AllProductsProvider {
   }
   
   consultaServidor() {
-    return this.http.get(this.url+'/produtos');
+    return this.http.get(this.url+'/anuncios');
   }
 
   todosAnuncios(){

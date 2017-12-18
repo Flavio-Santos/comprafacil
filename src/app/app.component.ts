@@ -3,17 +3,13 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Facebook } from '@ionic-native/facebook';
-import { HttpModule } from '@angular/http';
-import { HttpClientModule } from '@angular/common/http';
 
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-import { ProductlistPage } from '../pages/productlist/productlist'
+import { ProductlistPage } from '../pages/productlist/productlist';
+import { MeusAnunciosPage } from '../pages/meus-anuncios/meus-anuncios';
 import { ChatPage } from '../pages/chat/chat';
 import { MappagePage } from '../pages/mappage/mappage';
-
-
 
 
 @Component({
@@ -32,8 +28,8 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'Busca de produtos', component: ListPage },
-      { title: 'Produtos', component: ProductlistPage },
+      { title: 'Todos Produtos', component: ProductlistPage },
+      { title: 'Meus Anuncios', component: MeusAnunciosPage },
       { title: 'Chat', component: ChatPage },
       { title: 'Maps', component: MappagePage },
     ];

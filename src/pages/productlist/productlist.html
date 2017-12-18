@@ -17,7 +17,7 @@
   <ion-grid>
     <ion-row *ngFor="let product of products">
       <ion-col col-4 class="img">
-          <img src="{{product.imagem}}" alt="">
+          <img *ngIf="!!product.imagens[0]" [src]="product.imagens[0]" alt="">
       </ion-col>
       <ion-col col-5 class="dados">
         <p><b> {{product.nome}}</b></p>
