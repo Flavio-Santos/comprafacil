@@ -7,8 +7,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import { CadastrarPage } from '../pages/cadastrar/cadastrar'
+import { CadastrarPage } from '../pages/cadastrar/cadastrar';
+import { MeusAnunciosPage } from '../pages/meus-anuncios/meus-anuncios';
 import { ProductlistPage } from '../pages/productlist/productlist';
+import { VenderPage } from '../pages/vender/vender';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,6 +21,7 @@ import { MappagePage } from '../pages/mappage/mappage';
 import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 import { Facebook } from '@ionic-native/facebook';
 import { UserProvider } from '../providers/user/user';
+import { MeusAnunciosProvider } from '../providers/meus-anuncios/meus-anuncios';
 //colocar ali em cima se der pau FacebookLoginResponse
 
 const config: SocketIoConfig = { url: 'http://10.10.20.138:3001', options: {} };
@@ -30,9 +33,10 @@ const config: SocketIoConfig = { url: 'http://10.10.20.138:3001', options: {} };
     ListPage,
     ProductlistPage,
     ChatPage,
-    ListPage,
+    MeusAnunciosPage,
     MappagePage,
-    CadastrarPage
+    CadastrarPage,
+    VenderPage
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,9 @@ const config: SocketIoConfig = { url: 'http://10.10.20.138:3001', options: {} };
     ChatPage,
     ListPage,
     MappagePage,
-    CadastrarPage
+    CadastrarPage,
+    MeusAnunciosPage,
+    VenderPage
   ],
   providers: [
     StatusBar,
@@ -58,7 +64,8 @@ const config: SocketIoConfig = { url: 'http://10.10.20.138:3001', options: {} };
     Facebook,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AllProductsProvider,
-    UserProvider
+    UserProvider,
+    MeusAnunciosProvider
   ]
 })
 export class AppModule {}

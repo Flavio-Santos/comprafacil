@@ -29,7 +29,7 @@ export class UserProvider {
 
   store(data){
     let headers = new HttpHeaders('Content-Type:application/json; charset=UTF-8');
-    let myData = JSON.stringify({ nome: data.nome, email: data.email, senha:data.senha });
+    let myData = JSON.stringify({ nome: data.nome, email: data.email, senha: data.senha });
     return this.http.post(this.url + '/usuarios', myData, { headers: headers });
   }
 

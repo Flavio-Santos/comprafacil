@@ -27918,6 +27918,15 @@ page-chat .message_row {
   background-color: #fff;
 }
 
+page-meus-anuncios .preco {
+  color: darkgreen;
+  padding-top: 1em;
+}
+
+page-meus-anuncios ion-row {
+  border-bottom: 1px solid lightgray;
+}
+
 page-productlist .preco {
   color: darkgreen;
   padding-top: 1em;

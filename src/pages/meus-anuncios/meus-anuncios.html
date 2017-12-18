@@ -7,12 +7,48 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>MeusAnuncios</ion-title>
+    <ion-title>{{ title }}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+
+  <ion-list *ngIf="anuncios.length > 0">
+    <ion-item>
+      <button ion-button col-5 offset-7 (click)="anunciar()">Quero Vender!</button>
+    </ion-item>
+  </ion-list>
+
+  <ion-grid *ngIf="anuncios.length > 0">
+    <ion-row *ngFor="let product of anuncios">
+      <ion-col col-4 class="img">
+        <img *ngIf="!!product.imagens[0]" [src]="product.imagens[0]" alt="">
+        <img *ngIf="!product.imagens[0]" src="https://www.materialui.co/materialIcons/image/camera_alt_grey_192x192.png" alt="">
+      </ion-col>
+      <ion-col col-5 class="dados">
+        <p><b> {{product.nome}}</b></p>
+        <p>{{product.descricao}}</p>
+      </ion-col>
+      <ion-col col-3 class="preco">
+        {{product.valor}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-row *ngIf="anuncios.length <= 0">
+    <ion-col col-12 text-center>
+      Voce ainda nao anunciou nada!
+    </ion-col>
+
+    <ion-col col-12 text-center></ion-col>
+
+    <ion-col col-12>
+      <button ion-button col-5 (click)="verAnuncios()">Anuncios</button>
+      <ion-col col-2 text-center>OU</ion-col>
+      <button ion-button col-5 (click)="anunciar()">Quero Vender!</button>
+    </ion-col>
+  </ion-row>
 
 </ion-content>

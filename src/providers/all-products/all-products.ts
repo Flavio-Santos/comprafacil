@@ -31,4 +31,8 @@ export class AllProductsProvider {
     return this.http.get(this.url+'/anuncios');
   }
 
+  getCategorias() {
+    return this.http.get(this.url+'/categorias');
+  }
+
 }
